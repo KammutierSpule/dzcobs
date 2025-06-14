@@ -7,7 +7,7 @@ _build-*/
 cmake-build*/
 out/
 vcpkg_installed/
-.python-version
+
 .vs
 .sphinx
 .cache
@@ -241,4 +241,7 @@ $RECYCLE.BIN/
 
 # Runtime lock files created by tools/scripts
 *.lock
-.python-version
+
+# Coverage
+/default.profraw
+/lcov.info
