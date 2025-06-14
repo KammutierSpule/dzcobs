@@ -43,18 +43,18 @@ endif()
 
 # Meta information about the project
 # gersemi: off
-set(META_PROJECT_NAME        "dzcobs")
+set(META_PROJECT_NAME "dzcobs")
 set(META_PROJECT_DESCRIPTION "Dictionary compression for COBS encoding")
 set(META_AUTHOR_ORGANIZATION "Mario Luzeiro")
-set(META_GITHUB_REPO         "https://github.com/KammutierSpule/dzcobs")
-set(META_AUTHOR_DOMAIN       "https://github.com/KammutierSpule/dzcobs")
-set(META_AUTHOR_MAINTAINER   "Mario Luzeiro")
-set(META_VERSION_MAJOR       "0")
-set(META_VERSION_MINOR       "0")
-set(META_VERSION_PATCH       "0")
-set(META_VERSION_REVISION    "${GIT_REV}")
-set(META_VERSION             "${META_VERSION_MAJOR}.${META_VERSION_MINOR}.${META_VERSION_PATCH}")
-set(META_NAME_VERSION        "${META_PROJECT_NAME} v${META_VERSION} (${META_VERSION_REVISION})")
+set(META_GITHUB_REPO "https://github.com/KammutierSpule/dzcobs")
+set(META_AUTHOR_DOMAIN "https://github.com/KammutierSpule/dzcobs")
+set(META_AUTHOR_MAINTAINER "Mario Luzeiro")
+set(META_VERSION_MAJOR "0")
+set(META_VERSION_MINOR "0")
+set(META_VERSION_PATCH "0")
+set(META_VERSION_REVISION "${GIT_REV}")
+set(META_VERSION "${META_VERSION_MAJOR}.${META_VERSION_MINOR}.${META_VERSION_PATCH}")
+set(META_NAME_VERSION "${META_PROJECT_NAME} v${META_VERSION} (${META_VERSION_REVISION})")
 # gersemi: on
 
 string(MAKE_C_IDENTIFIER ${META_PROJECT_NAME} META_PROJECT_ID)
@@ -80,19 +80,19 @@ asap_push_project(${META_PROJECT_NAME})
 # Project options
 # gersemi: off
 set(OPTIONS_LIST
-  BUILD_SHARED_LIBS        "Build shared instead of static libraries." ON
-  ASAP_BUILD_TESTS         "Setup target to build and run tests." OFF
-  ASAP_BUILD_EXAMPLES      "Setup target to build the examples." OFF
-  ASAP_BUILD_DOCS          "Setup target to build the documentation." OFF
-  ASAP_WITH_GOOGLE_ASAN    "Instrument code with address sanitizer" OFF
-  ASAP_WITH_GOOGLE_UBSAN   "Instrument code with undefined behavior sanitizer" OFF
-  ASAP_WITH_GOOGLE_TSAN    "Instrument code with thread sanitizer" OFF
-  ASAP_WITH_VALGRIND       "Instrument code with valgrind profilers" OFF
-  ASAP_WITH_DOXYGEN        "Create targets for doxygen api docs" OFF
-  ASAP_WITH_SPHINX         "Create targets for sphinx docs" OFF
-  ASAP_WITH_CLANG_FORMAT   "Create targets for clang-format" ON
-  ASAP_WITH_CLANG_TIDY     "Create targets for clang-tidy" ON
-  USE_CCACHE               "Enable caching of compiled artifacts using ccache" OFF
+  BUILD_SHARED_LIBS "Build shared instead of static libraries." ON
+  ASAP_BUILD_TESTS "Setup target to build and run tests." OFF
+  ASAP_BUILD_EXAMPLES "Setup target to build the examples." OFF
+  ASAP_BUILD_DOCS "Setup target to build the documentation." OFF
+  ASAP_WITH_GOOGLE_ASAN "Instrument code with address sanitizer" OFF
+  ASAP_WITH_GOOGLE_UBSAN "Instrument code with undefined behavior sanitizer" OFF
+  ASAP_WITH_GOOGLE_TSAN "Instrument code with thread sanitizer" OFF
+  ASAP_WITH_VALGRIND "Instrument code with valgrind profilers" OFF
+  ASAP_WITH_DOXYGEN "Create targets for doxygen api docs" OFF
+  ASAP_WITH_SPHINX "Create targets for sphinx docs" OFF
+  ASAP_WITH_CLANG_FORMAT "Create targets for clang-format" ON
+  ASAP_WITH_CLANG_TIDY "Create targets for clang-tidy" ON
+  USE_CCACHE "Enable caching of compiled artifacts using ccache" OFF
 )
 # gersemi: on
 # Process each option
@@ -167,9 +167,6 @@ include(cmake/FasterBuild.cmake)
 # Top level code generation
 # ------------------------------------------------------------------------------
 
-# Generate version-header
-configure_file(templates/version.h.in ${CMAKE_CURRENT_BINARY_DIR}/include/${META_PROJECT_ID_LOWER}/version.h)
-
 # Generate a clangd configuration file that points to the compilation database
 # in the cmake build directory. We need to do this as the build directory is
 # different for every preset and can be different as well when the user decides
@@ -220,7 +217,8 @@ if(ASAP_BUILD_TESTS)
     GITHUB_REPOSITORY
     cpputest/cpputest
     OPTIONS
-    "TESTS OFF")
+    "TESTS OFF"
+  )
 endif()
 
 # ------------------------------------------------------------------------------
@@ -230,7 +228,7 @@ endif()
 # cmake modules.
 # ------------------------------------------------------------------------------
 
-add_subdirectory(third_party)
+#add_subdirectory(third_party)
 
 # ------------------------------------------------------------------------------
 # Additional CMake modules

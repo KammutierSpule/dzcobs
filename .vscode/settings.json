@@ -296,7 +296,7 @@
 	},
 	"terminal.integrated.enableVisualBell": true,
 	"files.trimTrailingWhitespace": false,
-	"cpputestTestAdapter.testExecutable": "${workspaceFolder}/out/build/dev-linux/bin/dzcobs_test",
+	"cpputestTestAdapter.testExecutable": "${workspaceFolder}/out/build/dev-clang/bin/dzcobs_test",
 	"memory-view.showMemoryPanel": true,
 	"coverage-gutters.showGutterCoverage": false,
 	"coverage-gutters.showLineCoverage": true,

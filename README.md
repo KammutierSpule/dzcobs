@@ -37,4 +37,8 @@ Any contribution to the project be submitted under the same license of this proj
 
 ## References
 Other related project references:
+  - [COBS-C](https://github.com/cmcqueen/cobs-c)
   - [rCOBS](https://github.com/Dirbaio/rcobs)
+  - [COBS by Geoffrey Hunter](https://blog.mbedded.ninja/programming/serialization-formats/consistent-overhead-byte-stuffing-cobs)
+  - [TCOBS](https://github.com/rokath/tcobs)
+  - [COBS](https://github.com/rokath/cobs)
