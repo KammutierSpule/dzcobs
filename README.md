@@ -17,15 +17,17 @@ In addition to COBS encoding, a dictionary-based compression scheme is applied t
 
 ## Usage
 To integrate the code on your project, you need to consider only the following two folders:
-  - [dzcobs](/dzcobs)
-  -    [dzcobs/include](/dzcobs/include) header files to be added to your include paths.
-  -    [dzcobs/src](/dzcobs/src) source code to be compiled by your project.
+  - [dzcobs/include](/dzcobs/include) header files to be added to your include paths.
+  - [dzcobs/src](/dzcobs/src) source code to be compiled by your project.
 
 You may want to perform a [git sparse checkout](https://git-scm.com/docs/git-sparse-checkout) to your project with only those folders.
 
 No CMAKE file to build project as a library is currently supported.
 
 All other files on this repository are intended for internal use.
+
+## Dependencies
+No dependencies need for integration.
 
 ## License
 Distributed under the 3-Clause BSD License. See accompanying file LICENSE or a copy at https://opensource.org/licenses/BSD-3-Clause
@@ -34,6 +36,16 @@ SPDX-License-Identifier: BSD-3-Clause
 
 ## Contribution
 Any contribution to the project be submitted under the same license of this project.
+
+## Development Investment
+
+Open source software doesn't come free. This project represents **50 hours** of development time.
+
+**Time Breakdown:** Core development (21 hrs) • Testing and bug fixing (18 hrs) • Documentation (7 hrs) • Research (4 hrs)
+
+**Appreciate this work?** ⭐ Star the repo • 🐛 Report issues • 💝 [Sponsor/donate]
+
+**Need consulting?** I'm available for custom software development and consulting services. [Contact me](mailto:mrluzeiro@ua.pt).
 
 ## References
 Other related project references:
