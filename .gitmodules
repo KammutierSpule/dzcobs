@@ -1,3 +1,0 @@
-[submodule "cmake/common"]
-	path = cmake/common
-	url = https://github.com/swift-nav/cmake
