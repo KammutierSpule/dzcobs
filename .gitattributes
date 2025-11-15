@@ -10,5 +10,6 @@
 # in Unix via a file share from Windows, the scripts will work.
 *.sh text eol=lf
 
+# Only detect correct folder
 * linguist-vendored
-dzcobs/* linguist-vendored=false
+dzcobs/** linguist-vendored=false
